@@ -63,7 +63,7 @@ function update_bar_chart(selectedValue) {
           y: obj.otu_ids.slice(0,10).map((otu_id) => `OTU ${otu_id}`).reverse(),
           text: obj.otu_labels.slice(0,10).reverse(),
           type: "bar",
-          marker: {color: "rgb(166,172,237)"},
+          marker: {color: "rgb(50,235,50)"},
           orientation: "h"
       }];
       
@@ -91,7 +91,7 @@ function update_bubble_chart(selectedValue) {
           marker: {
               size: obj.sample_values,
               color: obj.otu_ids,
-              colorscale: "Sunset"
+              colorscale: "Cividis"
           }
       }];
   
@@ -116,25 +116,24 @@ function update_gauge_chart(selectedValue) {
 
       // Set trace info for gauge chart
       let trace = [{
-          domain: { x: [0, 1], y: [0, 1] },
           value: obj.wfreq,
           title: { text: "<b>Belly Button Washing Frequency</b><br>Scrubs per Week", font: {size: 24}},
           type: "indicator", 
           mode: "gauge+number",
           gauge: {
               axis: {range: [null, 10]}, 
-              bar: {color: "rgb(68,166,198)"},
+              bar: {color: "rgb(70,70,200)"},
               steps: [
-                  { range: [0, 1], color: "rgb(233,245,248)" },
-                  { range: [1, 2], color: "rgb(218,237,244)" },
-                  { range: [2, 3], color: "rgb(203,230,239)" },
-                  { range: [3, 4], color: "rgb(188,223,235)" },
-                  { range: [4, 5], color: "rgb(173,216,230)" },
-                  { range: [5, 6], color: "rgb(158,209,225)" },
-                  { range: [6, 7], color: "rgb(143,202,221)" },
-                  { range: [7, 8], color: "rgb(128,195,216)" },
-                  { range: [8, 9], color: "rgb(113,187,212)" },
-                  { range: [9, 10], color: "rgb(98,180,207)" }
+                  { range: [0, 1], color: "rgb(235,255,250)" },
+                  { range: [1, 2], color: "rgb(220,245,245)" },
+                  { range: [2, 3], color: "rgb(205,235,240)" },
+                  { range: [3, 4], color: "rgb(190,225,235)" },
+                  { range: [4, 5], color: "rgb(175,215,230)" },
+                  { range: [5, 6], color: "rgb(160,205,225)" },
+                  { range: [6, 7], color: "rgb(145,195,220)" },
+                  { range: [7, 8], color: "rgb(130,185,215)" },
+                  { range: [8, 9], color: "rgb(115,175,210)" },
+                  { range: [9, 10], color: "rgb(100,165,205)" }
               ]
           }
       }];
